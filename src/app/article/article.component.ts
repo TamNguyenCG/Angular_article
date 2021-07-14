@@ -41,7 +41,6 @@ export class ArticleComponent implements OnInit {
   }
 
   panelOpenState = false;
-  @ViewChild(MatPaginator) paginator: MatPaginator | undefined
 
   constructor() { }
 
