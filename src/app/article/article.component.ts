@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {Article} from "./article";
+import {MatPaginator} from "@angular/material/paginator";
+
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.css']
 })
+
 export class ArticleComponent implements OnInit {
 
   article: Article = {};
@@ -37,9 +40,14 @@ export class ArticleComponent implements OnInit {
     this.articles.push(this.article);
   }
 
+  panelOpenState = false;
+  @ViewChild(MatPaginator) paginator: MatPaginator | undefined
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+
+
